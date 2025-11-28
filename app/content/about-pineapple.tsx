@@ -1,0 +1,88 @@
+import { Box, Container, ImageList, ImageListItem, Typography } from '@mui/material'
+import Image from 'next/image'
+import type { CSSProperties } from 'react'
+import image from '../assets/image1.png'
+import { Height } from '@mui/icons-material'
+import { url } from 'inspector'
+
+function AboutPineApple() {
+  const imageStyle: CSSProperties = {
+    height: '620px',
+    position: 'relative',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  }
+
+  return (
+    <>
+      <Box sx={{
+        display: 'flex',
+        flexDirection: { xs: 'column', lg: 'row' },
+        justifyContent: 'center',
+        gap: '60px',
+        alignItems: 'center',
+        height: '100vh',
+        margin: { sm: '30px', lg: '0px' },
+      }}>
+        {/* หัวข้อ */}
+        <Typography
+          fontFamily={'Playfair Display'}
+          fontWeight={700}
+          width={317}
+          sx={{
+            color: '#0E204E',
+            fontSize: { xs: '34px', lg: '60px' },
+            textAlign: { xs: 'center', lg: 'start' }
+          }}
+        >
+          About <br /> Pineapple Island
+        </Typography>
+
+        {/* กล่อง */}
+        <Box sx={{
+          display: 'flex',
+          position: 'relative',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+          <Box sx={{ filter: { xs: 'brightness(0.6)', lg: 'brightness(1)' } }}>
+            <Image
+              style={imageStyle}
+              src={image}
+              width={728}
+              height={620}
+              alt='house'
+            />
+          </Box>
+
+          {/* ข้อความ */}
+          <Box
+            width={433}
+            height={620}
+            sx={{
+              color: 'white',
+              backgroundColor: { xs: 'transparent', lg: '#0E204E' },
+              padding: '70px',
+              display: 'flex',
+              position: { xs: 'absolute', lg: 'relative' },
+              alignItems: 'center',
+            }}>
+            <Typography
+              fontFamily={'Manrope'}
+              fontWeight={400}
+              fontSize={20}
+              lineHeight={'160%'}
+            >
+              Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first.
+              It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development.
+              A perfect, professional built  abode that gives you the true taste of beauty and happiness.
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+
+    </>
+  )
+}
+
+export default AboutPineApple
