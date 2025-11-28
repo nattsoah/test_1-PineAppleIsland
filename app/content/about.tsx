@@ -48,7 +48,7 @@ function About() {
             position: 'absolute',
             left: { lg: '5%' },
             gap: { xs: '20px', lg: '0px' },
-            backgroundColor: { xs: '', lg: '#0E204E' },
+            backgroundColor: { xs: '#0E204E', lg: 'white' },
             margin: { sm: '30px', lg: '0px' }
           }}
         >
