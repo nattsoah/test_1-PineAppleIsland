@@ -30,7 +30,14 @@ function InTouch() {
 
     return (
         <>
-            <Box sx={{ backgroundColor: '', display: 'flex', justifyContent: 'center', height: '100vh', mt: '50px', }}>
+            <Box sx={{
+                backgroundColor: '',
+                display: 'flex',
+                justifyContent: 'center',
+                height: '100vh',
+                mt: '50px',
+                margin: { sm: '30px', lg: '0px' },
+            }}>
                 <Box sx={{ backgroundColor: '', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px', alignItems: 'center', flexWrap: 'nowrap' }}>
                     <Typography
                         fontFamily={'Playfair Display'}
