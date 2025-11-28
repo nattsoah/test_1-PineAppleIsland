@@ -98,24 +98,28 @@ function Footer() {
             {/* responsive */}
             <Box
                 sx={{
-                    display: {xs:'flex' , lg:'none'},
-                    flexDirection:'column',
-                    gap:'20px',
-                    color:'white',
-                    textAlign:'center',
+                    display: { xs: 'flex', lg: 'none' },
+                    flexDirection: 'column',
+                    gap: '20px',
+                    color: 'white',
+                    textAlign: 'center',
                 }}
             >
                 <Typography
                     fontFamily={'Lato'}
                     fontWeight={500}
-                    fontSize={30}
+                    sx={{
+                        fontSize: { xs: '18px', lg: '30px' }
+                    }}
                 >
                     Pineapple Island
                 </Typography>
                 <Typography
                     fontFamily={'Gotham'}
                     fontWeight={300}
-                    fontSize={24}
+                    sx={{
+                        fontSize: { xs: '18px', lg: '24px' }
+                    }}
                 >
                     ©️
                     Copyright

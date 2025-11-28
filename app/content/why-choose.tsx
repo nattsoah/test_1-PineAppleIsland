@@ -14,18 +14,21 @@ function WhyChoose() {
     }
     return (
         <>
-            <Box sx={{
-                height: '100vh',
-                position: 'relative',
-                margin: { sm: '30px', lg: '0px' }
-            }}>
-                <Box sx={{
-                    position: 'absolute',
-                    inset: 0,
-                    backgroundColor: { xs: 'transparent', lg: '#0E204E' },
-                    clipPath: ' polygon(0% 0%, 100% 0, 100% 80%, 70% 65%, 0 80%)',
-                    zIndex: 0,
-                }} />
+            <Box
+                sx={{
+                    minHeight: '100vh',
+                    position: 'relative',
+                    margin: { xs: '30px', lg: '0px' },
+                }}>
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        inset: 0,
+                        backgroundColor: { xs: 'transparent', lg: '#0E204E' },
+                        clipPath: ' polygon(0% 0%, 100% 0, 100% 80%, 70% 65%, 0 80%)',
+                        zIndex: 0,
+                        width: '100%'
+                    }} />
                 <Box
                     sx={{
                         display: 'flex',
@@ -35,7 +38,8 @@ function WhyChoose() {
                         alignItems: 'center',
                         position: 'relative',
                         zIndex: '1',
-                        height: '100%'
+                        height: '100%',
+                        mt: '100px'
                     }}
                 >
                     {/* หัวข้อ */}
@@ -45,8 +49,9 @@ function WhyChoose() {
                         fontWeight={700}
                         sx={{
                             color: { xs: '#0E204E', lg: 'white' },
-                            fontSize: { xs: '34px', lg: '60px' },
-                            textAlign: { xs: 'center', lg: 'start' }
+                            fontSize: { xs: '24px', lg: '60px' },
+                            textAlign: { xs: 'center', lg: 'start' },
+                            margin: { xs: '0px', lg: '30px' }
                         }}
 
                     >Why Choose <br /> Pineapple  Island

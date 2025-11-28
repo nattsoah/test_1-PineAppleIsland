@@ -15,24 +15,26 @@ function AboutPineApple() {
 
   return (
     <>
-      <Box sx={{
-        display: 'flex',
-        flexDirection: { xs: 'column', lg: 'row' },
-        justifyContent: 'center',
-        gap: '60px',
-        alignItems: 'center',
-        height: '100vh',
-        margin: { sm: '30px', lg: '0px' },
-      }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', lg: 'row' },
+          justifyContent: 'center',
+          gap: '60px',
+          alignItems: 'center',
+          margin: { xs: '30px', lg: '0px' },
+          minHeight: '100vh',
+        }}>
         {/* หัวข้อ */}
         <Typography
           fontFamily={'Playfair Display'}
           fontWeight={700}
-          width={317}
+          minWidth={317}
           sx={{
             color: '#0E204E',
-            fontSize: { xs: '34px', lg: '60px' },
-            textAlign: { xs: 'center', lg: 'start' }
+            fontSize: { xs: '24px', lg: '60px' },
+            textAlign: { xs: 'center', lg: 'start' },
+            margin: {xs:'0px' , lg:'30px'}
           }}
         >
           About <br /> Pineapple Island
@@ -70,7 +72,7 @@ function AboutPineApple() {
             <Typography
               fontFamily={'Manrope'}
               fontWeight={400}
-              fontSize={20}
+              fontSize={16}
               lineHeight={'160%'}
             >
               Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first.

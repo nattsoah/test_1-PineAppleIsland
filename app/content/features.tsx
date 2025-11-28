@@ -30,7 +30,16 @@ function Features() {
 
     return (
         <>
-            <Box sx={{ backgroundColor: '', display: {xs:'none' , lg:'flex'}, justifyContent: 'center', height: '100vh', mt: '100vh' }}>
+            <Box
+                sx={{
+                    backgroundColor: '',
+                    display: { xs: 'none', lg: 'flex' },
+                    justifyContent: 'center',
+                    minHeight: '100vh',
+                    paddingTop:'10%'
+                    // height: '100vh',
+                    // mt: '100vh'
+                }}>
                 <Box>
                     <Box sx={{ backgroundColor: '', display: 'flex', alignItems: 'center', justifyContent: '', position: 'relative', height: '100%' }}>
                         <Image
@@ -72,8 +81,8 @@ function Features() {
                                                     alignItems: 'center',
                                                     backgroundColor: index % 2 == 0 ? '#0E3F3333' : 'transprant',
                                                     border: 0,
-                                                    p:'1px',
-                                                    m:'6px'
+                                                    p: '1px',
+                                                    m: '6px'
                                                 }}>
 
                                                 <Typography
@@ -84,7 +93,7 @@ function Features() {
                                                 >
                                                     {item}
                                                 </Typography>
-                                                <Checkbox defaultChecked  sx={{color:'#0E204E' , '&.Mui-checked':{ color:'#0E204E'}}} />
+                                                <Checkbox defaultChecked sx={{ color: '#0E204E', '&.Mui-checked': { color: '#0E204E' } }} />
                                             </TableCell>
                                         </TableRow>
                                     ))}

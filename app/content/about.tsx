@@ -6,27 +6,32 @@ import image1 from '../assets/image1.png'
 
 function About() {
   const imageStyle: CSSProperties = {
-    // right: '0px',
-    width: '1368px',
-    height: '717px',
-    zIndex: 'modal',
-    // position: 'absolute',
+    // maxWidth: '1368px',
+    // maxHeight: '717px',
+    width:'1368px',
+    height:'717px',
     position: 'relative',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    // filter: 'brightness(0.6)'
   }
 
   return (
     <>
-      <Box sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: { xs: 'center', lg: 'flex-end' },
-        margin: { sm: '30px', lg: '0px' },
-      }}>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: { xs: 'center', lg: 'flex-end' },
+          margin: { xs: '30px', lg: '0px' },
+          minHeight: '100vh',
+        }}>
         {/* รูปภาพ */}
-        <Box sx={{ filter: {xs:'brightness(0.6)' , lg:'brightness(1)'} }}>
+        <Box
+          sx={{
+            filter: { xs: 'brightness(0.6)', lg: 'brightness(1)' },
+            maxWidth: '1368px',
+            maxHeight: '717px',
+          }}>
           <Image
             style={imageStyle}
             src={image}
@@ -46,9 +51,9 @@ function About() {
             padding: '80px',
             justifyContent: 'center',
             position: 'absolute',
-            left: { lg: '5%' },
+            left: { lg: '2%' },
             gap: { xs: '20px', lg: '0px' },
-            backgroundColor: { xs: '#0E204E', lg: 'white' },
+            backgroundColor: { xs: 'transparent', lg: '#0E204E' },
             margin: { sm: '30px', lg: '0px' }
           }}
         >

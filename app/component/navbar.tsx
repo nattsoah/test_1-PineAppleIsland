@@ -46,7 +46,14 @@ function ResponsiveAppBar() {
                     ":hover": { cursor: 'pointer' }
                 }}>
                     {menu.map((menu) => (
-                        <Typography key={menu} fontFamily={'Manrope'} fontWeight={400} fontSize={20} sx={{ color: '#232323' }}>
+                        <Typography
+                            key={menu}
+                            fontFamily={'Manrope'}
+                            fontWeight={400}
+                            fontSize={20}
+                            sx={{
+                                color: '#232323',
+                            }}>
                             {menu}
                         </Typography>
                     ))}
@@ -55,7 +62,7 @@ function ResponsiveAppBar() {
 
                 {/* ปุ่ม responsive menu */}
                 <Box sx={{
-                    display: { md: 'flex', lg: 'none'},
+                    display: { md: 'flex', lg: 'none' },
                     gap: '80px',
                     ":hover": { cursor: 'pointer' }
                 }}>
@@ -96,7 +103,7 @@ function ResponsiveAppBar() {
                 <Box
                     width={'188px'}
                     height={'50px'}
-                    sx={{display: { xs: 'none', lg: 'block' }}}
+                    sx={{ display: { xs: 'none', lg: 'block' } }}
                 >
                     <Button
                         sx={{

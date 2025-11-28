@@ -1,7 +1,7 @@
-import Image from "next/image";
+'use client'
 import ResponsiveAppBar from "./component/navbar";
 import About from "./content/about";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, Grid, Stack } from "@mui/material";
 import AboutPineApple from "./content/about-pineapple";
 import WhyChoose from "./content/why-choose";
 import WhatPineApple from "./content/what-pineapple";
@@ -22,16 +22,18 @@ export default function Home() {
         backgroundColor: 'white'
       }}
     >
-      <ResponsiveAppBar />
-      <About />
-      <AboutPineApple />
-      <WhyChoose />
-      <WhatPineApple />
-      <Galleries />
-      <Features />
-      <BecomeAgent />
-      <InTouch />
-      <Footer/>
+      <Stack >
+        <ResponsiveAppBar />
+        <About/>
+        <AboutPineApple />
+        <WhyChoose />
+        <WhatPineApple />
+        <Galleries />
+        <Features />
+        <BecomeAgent />
+        <InTouch />
+        <Footer />
+      </Stack>
     </Container>
   );
 }

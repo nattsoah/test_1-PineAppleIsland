@@ -31,9 +31,11 @@ function Galleries() {
 
     return (
         <Box sx={{
-            height: '100vh',
-            mt: '100vh',
+            // height: '100vh',
+            minHeight: '100vh',
+            // mt: '100vh',
             margin: { sm: '30px', lg: '0px' },
+            paddingTop:'10%'
         }}>
             <Box
                 sx={{

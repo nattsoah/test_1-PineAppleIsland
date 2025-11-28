@@ -34,8 +34,10 @@ function BecomeAgent() {
                 backgroundColor: { xs: '#0E204E', lg: 'transparent' },
                 display: 'flex',
                 justifyContent: 'center',
-                height: '100vh',
-                mt: {xs:'150vh' , lg:'0'}
+                minHeight: '100vh',
+                mt:'10%'
+                // height: '100vh',
+                // mt: {xs:'150vh' , lg:'0'}
             }}>
                 <Box
                     sx={{
@@ -49,6 +51,7 @@ function BecomeAgent() {
                         fontSize={60}
                         sx={{
                             color: { xs: 'white', lg: '#0E204E' },
+                            fontSize:{xs : '24px' , lg:'60px'}
                         }}
                     >Become an Agent
                     </Typography>
@@ -72,14 +75,14 @@ function BecomeAgent() {
                             borderRadius: { xs: '5px', lg: '0px' },
                             backgroundColor: { xs: 'white', lg: '#0E204E' },
                             color: { xs: '#0E204E', lg: 'white' },
-                            width: '293px',
-                            height: '62px'
+                            width: {xs:'103px' , lg:'293px'},
+                            height: {xs:'40px' , lg:'62px'}
                         }}
                     >
                         <Typography
                             fontFamily={'Gotham'}
                             fontWeight={300}
-                            fontSize={20}
+                            fontSize={16}
                         >
                             Join Now
                         </Typography>
