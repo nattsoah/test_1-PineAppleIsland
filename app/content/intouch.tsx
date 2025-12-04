@@ -34,11 +34,9 @@ function InTouch() {
                 backgroundColor: '',
                 display: 'flex',
                 justifyContent: 'center',
-                // height: '100vh',
-                // mt: '50px',
-                minHeight: '100vh',
+                minHeight: 'auto',
                 margin: { xs: '30px', lg: '0px' },
-                pt:'10%'
+                pt:'100px'
             }}>
                 <Box sx={{ backgroundColor: '', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px', alignItems: 'center', flexWrap: 'nowrap' }}>
                     <Typography

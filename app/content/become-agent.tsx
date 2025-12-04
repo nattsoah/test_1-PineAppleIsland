@@ -34,10 +34,10 @@ function BecomeAgent() {
                 backgroundColor: { xs: '#0E204E', lg: 'transparent' },
                 display: 'flex',
                 justifyContent: 'center',
-                minHeight: '100vh',
-                mt:'10%'
+                minHeight: 'auto',
+                mt:'100px',
+                py:'50px'
                 // height: '100vh',
-                // mt: {xs:'150vh' , lg:'0'}
             }}>
                 <Box
                     sx={{
@@ -88,6 +88,8 @@ function BecomeAgent() {
                         </Typography>
                     </Button>
                 </Box>
+
+                {/* desktop image */}
                 <Box>
                     <Box sx={{ backgroundColor: '', display: { xs: 'none', lg: 'flex' }, alignItems: 'center', justifyContent: '', position: 'relative', height: '100%' }}>
                         <Box

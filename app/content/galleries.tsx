@@ -31,11 +31,9 @@ function Galleries() {
 
     return (
         <Box sx={{
-            // height: '100vh',
-            minHeight: '100vh',
-            // mt: '100vh',
+            minHeight: 'auto',
             margin: { sm: '30px', lg: '0px' },
-            paddingTop:'10%'
+            pt:'100px'
         }}>
             <Box
                 sx={{
@@ -96,8 +94,6 @@ const GalleriesResponsive = (): React.ReactElement => {
         backgroundPosition: 'center',
         objectFit: 'cover'
     }
-
-    // const image = [g1, g2, g3, g4, g5, g6, g7, g8, g9]
     const image = [
         { img: g10, cols: 2 },
         { img: g2, cols: 2 },
