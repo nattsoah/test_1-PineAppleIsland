@@ -57,19 +57,15 @@ function WhatPineApple() {
     ]
 
     return (
-        <>
+        <Box mt={'100px'}>
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '100px',
-                // height: '100vh',
-                // mt: '800px',
+                gap: '50px',
                 margin: { xs: '30px', lg: '0px' },
-                // mb: { xs: '10%', lg: '30%' },
-                minHeight: '100vh',
-                paddingTop: '5%'
+                minHeight: 'auto',
             }}>
                 {/* หัวข้อ */}
                 <Typography
@@ -199,22 +195,21 @@ function WhatPineApple() {
                 {/* responsive */}
                 <WhatPineAppleResponsive />
             </Box >
-        </>
+        </Box>
     )
 }
 
 export default WhatPineApple
 
+
 const WhatPineAppleResponsive = (): React.ReactElement => {
     const imageStyle: CSSProperties = {
-        minWidth: '335px',
-        minHeight: '387px',
+        maxWidth: '100%',
+        maxHeight: '100%',
         position: 'relative',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
     }
-
-
     const data = [
         { icon: icon7, text: 'Eco Friendly' },
         { icon: icon8, text: 'Smart Homes' },
@@ -228,7 +223,7 @@ const WhatPineAppleResponsive = (): React.ReactElement => {
         <Grid
             container
             width={'100%'}
-            height={'100%'}
+            height={'auto'}
             sx={{
                 backgroundColor: '',
                 display: { xs: 'block', lg: 'none' }

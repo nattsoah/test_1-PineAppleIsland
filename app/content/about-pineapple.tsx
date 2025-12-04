@@ -21,7 +21,7 @@ function AboutPineApple() {
           gap: '60px',
           alignItems: 'center',
           margin: { xs: '30px', lg: '0px' },
-          minHeight: '100vh',
+          minHeight: '800px',
         }}>
         {/* หัวข้อ */}
         <Typography

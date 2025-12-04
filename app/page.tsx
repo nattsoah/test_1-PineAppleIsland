@@ -19,8 +19,6 @@ export default function Home() {
         maxWidth: "1920px",
         pr: "0px !important",
         pl: "0px !important",
-        // pt: { xs: 6, md: 8 },
-        // pb: { xs: 6, md: 8 },
         backgroundColor: 'white'
       }}
     >

@@ -35,10 +35,8 @@ function Features() {
                     backgroundColor: '',
                     display: { xs: 'none', lg: 'flex' },
                     justifyContent: 'center',
-                    minHeight: '100vh',
-                    paddingTop:'10%'
-                    // height: '100vh',
-                    // mt: '100vh'
+                    minHeight: 'auto',
+                    mt:'100px'
                 }}>
                 <Box>
                     <Box sx={{ backgroundColor: '', display: 'flex', alignItems: 'center', justifyContent: '', position: 'relative', height: '100%' }}>

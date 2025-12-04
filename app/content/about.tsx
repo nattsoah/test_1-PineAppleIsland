@@ -23,7 +23,6 @@ function About() {
           alignItems: 'center',
           justifyContent: { xs: 'center', lg: 'flex-end' },
           margin: { xs: '30px', lg: '0px' },
-          minHeight: '100vh',
         }}>
         {/* รูปภาพ */}
         <Box
