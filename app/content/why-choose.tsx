@@ -16,7 +16,8 @@ function WhyChoose() {
         <>
             <Box
                 sx={{
-                    minHeight: '100vh',
+                    maxHeight: '708px',
+                    // minHeight: '100vh',
                     position: 'relative',
                     margin: { xs: '30px', lg: '0px' },
                 }}>
@@ -25,7 +26,7 @@ function WhyChoose() {
                         position: 'absolute',
                         inset: 0,
                         backgroundColor: { xs: 'transparent', lg: '#0E204E' },
-                        clipPath: ' polygon(0% 0%, 100% 0, 100% 80%, 70% 65%, 0 80%)',
+                        clipPath: ' polygon(0% 0%, 100% 0, 100% 100%, 70% 80%, 0 100%)',
                         zIndex: 0,
                         width: '100%'
                     }} />
@@ -104,33 +105,7 @@ function WhyChoose() {
                                 alt='house'
                             />
                         </Box>
-
                     </Box>
-
-                    {/* <Box sx={{ display: 'flex', boxShadow: '4px 5px 25px rgba(0, 0, 0, 0.1)' }}>
-                        <Box
-                            width={433}
-                            height={634}
-                            sx={{ backgroundColor: 'white', color: '#0E204E', padding: '70px', display: 'flex', alignItems: 'center' }}>
-                            <Typography
-                                fontFamily={'Manrope'}
-                                fontWeight={400}
-                                fontSize={20}
-                                lineHeight={'160%'}
-                            >
-                                Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first.
-                                It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development.
-                                A perfect, professional built  abode that gives you the true taste of beauty and happiness.
-                            </Typography>
-                        </Box>
-                        <Image
-                            style={imageStyle}
-                            src={image}
-                            width={728}
-                            height={634}
-                            alt='house'
-                        />
-                    </Box> */}
                 </Box>
             </Box>
         </>
