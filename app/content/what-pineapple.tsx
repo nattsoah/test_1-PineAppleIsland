@@ -20,13 +20,17 @@ import icon12 from '../assets/24:7-white.svg'
 function WhatPineApple() {
     const imageStyle1: CSSProperties = {
         maxWidth: '100%',
+        maxHeight: '100%',
         width: '567px',
         height: '582px',
+        aspectRatio: '3/2',
         objectFit: 'cover',
         position: 'relative',
         zIndex: 1
     }
     const imageStyle2: CSSProperties = {
+        maxWidth: '100%',
+        maxHeight: '100%',
         width: '568px',
         height: '582px',
         objectFit: 'cover',
@@ -37,8 +41,8 @@ function WhatPineApple() {
     const iconstyle: CSSProperties = {
         maxWidth: '80px',
         maxHeight: '80px',
-        width:'100%',
-        height:'100%'
+        width: '100%',
+        height: '100%'
     }
 
     const data1 = [
@@ -87,98 +91,108 @@ function WhatPineApple() {
                         display: { xs: 'none', lg: 'block' }
                     }}
                 >
-                    <Grid sx={{ backgroundColor: '', display: 'flex', justifyContent: 'center' }} size={12}>
+                    <Grid sx={{ backgroundColor: '', display: 'flex', justifyContent: 'center', alignItems: 'center' }} size={12}>
                         {/* รูปภาพ */}
-                        <Box sx={{ backgroundColor: '', display: 'flex', alignItems: 'center', justifyContent: '', position: 'relative', height: '100%' }}>
-                            <Image
-                                style={imageStyle1}
-                                src={image2}
-                                alt='box1'
-                            />
-                            <Box
-                                width={412}
-                                height={358}
-                                sx={{
-                                    position: 'relative',
-                                    // zIndex : 0,
-                                    transform: 'translate(-50%, 0%)',
-                                    backgroundColor: '#0E204E'
-                                }}
-                            >
+                        <Grid bgcolor={''} width={'50%'} size={6}>
+                            <Box sx={{ backgroundColor: '', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', position: 'relative', height: '100%' }}>
+                                <Image
+                                    style={imageStyle1}
+                                    src={image2}
+                                    alt='box1'
+                                />
+                                <Box
+                                    width={412}
+                                    height={358}
+                                    sx={{
+                                        // position: 'absolute',
+                                        // transform: 'translate(100%, 0%)',
+                                        backgroundColor: '#0E204E'
+                                    }}
+                                >
+                                </Box>
                             </Box>
-                        </Box>
+                        </Grid>
 
                         {/* option */}
-                        <Box sx={{ backgroundColor: '', display: 'flex', justifyContent: '', alignItems: 'center', gap: '100px' }}>
-                            {data1.map((text, index) => (
-                                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px' }} >
-                                    <Image
-                                        style={iconstyle}
-                                        src={text.icon}
-                                        alt='icon'
+                        <Grid bgcolor={''} width={'50%'} size={6} alignItems={'center'}>
+                            <Box sx={{ backgroundColor: '', display: 'flex', justifyContent: 'flex-end', gap: { lg: '80px', xl: '100px' } }}>
+                                {data1.map((text, index) => (
+                                    <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px' }} >
+                                        <Image
+                                            style={iconstyle}
+                                            src={text.icon}
+                                            alt='icon'
+                                        // width={80}
+                                        // height={80}
+                                        />
+
+                                        <Typography
+                                            fontFamily={'Poppins'}
+                                            fontWeight={400}
+                                            sx={{
+                                                fontSize: { lg: '16px', xl: '18px' },
+                                                color: '#263238'
+                                            }}
+                                        >
+                                            {text.text}
+                                        </Typography>
+
+                                    </Box>
+                                ))}
+                            </Box>
+                        </Grid>
+                    </Grid>
+                    <Grid sx={{ backgroundColor: '', display: 'flex', justifyContent: 'center', alignItems: 'center' }} size={12}>
+                        {/* option */}
+                        <Grid bgcolor={''} width={'50%'} size={6} alignItems={'center'}>
+                            <Box sx={{ backgroundColor: '', display: 'flex', justifyContent: 'flex-start', gap: { lg: '80px', xl: '100px' } }}>
+                                {data2.map((text, index) => (
+                                    <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px' }} >
+                                        <Image
+                                            style={iconstyle}
+                                            src={text.icon}
+                                            alt='icon'
                                         // width={80}
                                         // height={80}
 
-                                    />
+                                        />
 
-                                    <Typography
-                                        fontFamily={'Poppins'}
-                                        fontWeight={400}
-                                        sx={{
-                                            color: '#263238'
-                                        }}
-                                    >
-                                        {text.text}
-                                    </Typography>
+                                        <Typography
+                                            fontFamily={'Poppins'}
+                                            fontWeight={400}
+                                            sx={{
+                                                fontSize: { lg: '16px', xl: '18px' },
+                                                color: '#263238'
+                                            }}
+                                        >
+                                            {text.text}
+                                        </Typography>
 
-                                </Box>
-                            ))}
-                        </Box>
-                    </Grid>
-                    <Grid sx={{ backgroundColor: '', display: 'flex', justifyContent: 'center' }} size={12}>
-
-                        <Box sx={{ backgroundColor: '', display: 'flex', justifyContent: '', alignItems: 'center', gap: '100px' }}>
-                            {data2.map((text, index) => (
-                                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px' }} >
-                                    <Image
-                                        src={text.icon}
-                                        alt='icon'
-                                        width={80}
-                                        height={80}
-                                    />
-
-                                    <Typography
-                                        fontFamily={'Poppins'}
-                                        fontWeight={400}
-                                        fontSize={18}
-                                        sx={{ color: '#263238' }}
-                                    >
-                                        {text.text}
-                                    </Typography>
-
-                                </Box>
-                            ))}
-                        </Box>
-
-                        <Box sx={{ backgroundColor: '', display: 'flex', alignItems: 'center', justifyContent: '', position: 'relative', height: '100%' }}>
-                            <Box
-                                width={412}
-                                height={358}
-                                sx={{
-                                    position: 'relative',
-                                    // zIndex : 0,
-                                    transform: 'translate(50%, 0%)',
-                                    backgroundColor: '#0E204E'
-                                }}
-                            >
+                                    </Box>
+                                ))}
                             </Box>
-                            <Image
-                                style={imageStyle2}
-                                src={image3}
-                                alt='box1'
-                            />
-                        </Box>
+                        </Grid>
 
+                        {/* รูปภาพ */}
+                        <Grid bgcolor={''} width={'50%'} size={6}>
+                            <Box sx={{ backgroundColor: '', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: 'relative', height: '100%' }}>
+                                <Box
+                                    width={412}
+                                    height={358}
+                                    sx={{
+                                        // position: 'absolute',
+                                        // transform: 'translate(-100%, 0%)',
+                                        backgroundColor: '#0E204E'
+                                    }}
+                                >
+                                </Box>
+                                <Image
+                                    style={imageStyle1}
+                                    src={image3}
+                                    alt='box2'
+                                />
+                            </Box>
+                        </Grid>
                     </Grid>
                 </Grid>
 

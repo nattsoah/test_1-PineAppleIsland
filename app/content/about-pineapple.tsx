@@ -2,8 +2,6 @@ import { Box, Container, ImageList, ImageListItem, Typography } from '@mui/mater
 import Image from 'next/image'
 import type { CSSProperties } from 'react'
 import image from '../assets/image1.png'
-import { Height } from '@mui/icons-material'
-import { url } from 'inspector'
 
 function AboutPineApple() {
   const imageStyle: CSSProperties = {
@@ -64,7 +62,7 @@ function AboutPineApple() {
             sx={{
               color: 'white',
               backgroundColor: { xs: 'transparent', lg: '#0E204E' },
-              padding: '70px',
+              padding: {xs:'50px' ,md:'10px' , lg:'50px'},
               display: 'flex',
               position: { xs: 'absolute', lg: 'relative' },
               alignItems: 'center',
@@ -72,8 +70,10 @@ function AboutPineApple() {
             <Typography
               fontFamily={'Manrope'}
               fontWeight={400}
-              fontSize={16}
               lineHeight={'160%'}
+              sx={{
+                fontSize: { xs: '16px', lg: '20px' },
+              }}
             >
               Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first.
               It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development.
