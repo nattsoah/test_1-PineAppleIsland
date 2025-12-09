@@ -30,11 +30,11 @@ function Galleries() {
     const image = [g1, g2, g3, g4, g5, g6, g7, g8, g9]
 
     return (
-        <Box sx={{
-            minHeight: 'auto',
-            margin: { sm: '30px', lg: '0px' },
-            pt:'100px'
-        }}>
+        <Box
+            minHeight={'auto'}
+            margin={{ sm: '30px', lg: '0px' }}
+            paddingTop={'100px'}
+        >
             <Box
                 sx={{
                     display: { xs: 'none', lg: 'flex' },
@@ -46,7 +46,7 @@ function Galleries() {
                     fontFamily={'Playfair Display'}
                     fontWeight={700}
                     fontSize={60}
-                    sx={{ color: '#0E204E' }}
+                    color='#0E204E'
                 >
                     Galleries
                 </Typography>
@@ -56,13 +56,15 @@ function Galleries() {
                     fontSize={20}
                     lineHeight={'180%'}
                     textAlign={'center'}
-                    sx={{ color: '#263238', maxWidth: '726px' }}
-
+                    color='#263238'
+                    maxWidth={'726px'}
                 >
                     a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home.
                 </Typography>
 
-                <Container maxWidth='xl' sx={{ backgroundColor: '', width: '100%', height: '100%', mt: '50px' }}>
+                <Container
+                    maxWidth='xl'
+                    sx={{ backgroundColor: '', width: '100%', height: '100%', mt: '50px' }}>
                     <ImageList sx={{ width: '100%', height: '100%' }} cols={3} rowHeight={450} gap={30}>
                         {image.map((item, index) => (
                             <ImageListItem key={index}>
@@ -121,7 +123,7 @@ const GalleriesResponsive = (): React.ReactElement => {
                 fontFamily={'Playfair Display'}
                 fontWeight={700}
                 fontSize={34}
-                sx={{ color: '#0E204E' }}
+                color='#0E204E'
             >
                 Available Homes
             </Typography>
@@ -131,13 +133,13 @@ const GalleriesResponsive = (): React.ReactElement => {
                 fontSize={16}
                 lineHeight={'180%'}
                 textAlign={'center'}
-                sx={{ color: '#263238', maxWidth: '726px' }}
-
+                color='#263238'
+                maxWidth={'726px'}
             >
                 a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home.
             </Typography>
 
-            <Container maxWidth='xl' sx={{ backgroundColor: '', width: '100%', height: '100%', mt: '50px' }}>
+            <Container maxWidth='xl' sx={{width: '100%', height: '100%', mt: '50px' }}>
                 <ImageList
                     sx={{ width: '100%', height: '100%' }}
                     variant='quilted'

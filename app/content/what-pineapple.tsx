@@ -28,16 +28,6 @@ function WhatPineApple() {
         position: 'relative',
         zIndex: 1
     }
-    const imageStyle2: CSSProperties = {
-        maxWidth: '100%',
-        maxHeight: '100%',
-        width: '568px',
-        height: '582px',
-        objectFit: 'cover',
-        position: 'relative',
-        zIndex: 1
-    }
-
     const iconstyle: CSSProperties = {
         maxWidth: '80px',
         maxHeight: '80px',
@@ -58,23 +48,22 @@ function WhatPineApple() {
 
     return (
         <Box mt={'100px'}>
-            <Box sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '50px',
-                margin: { xs: '30px', lg: '0px' },
-                minHeight: 'auto',
-            }}>
+            <Box
+                margin={{ xs: '30px', lg: '0px' }}
+                minHeight={'auto'}
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '50px',
+                }}>
                 {/* หัวข้อ */}
                 <Typography
                     fontFamily={'Playfair Display'}
                     fontWeight={700}
-                    sx={{
-                        color: '#0E204E',
-                        fontSize: { xs: '24px', lg: '60px' },
-                    }}
+                    color='#0E204E'
+                    fontSize={{ xs: '24px', lg: '60px' }}
                 >What Pineapple Land Offers</Typography>
 
                 {/* desktop */}
@@ -82,15 +71,15 @@ function WhatPineApple() {
                     container
                     width={'100%'}
                     height={'100%'}
+                    padding={'30px'}
                     sx={{
-                        padding: '30px',
                         display: { xs: 'none', lg: 'block' }
                     }}
                 >
-                    <Grid sx={{ backgroundColor: '', display: 'flex', justifyContent: 'center', alignItems: 'center' }} size={12}>
+                    <Grid sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} size={12}>
                         {/* รูปภาพ */}
-                        <Grid bgcolor={''} width={'50%'} size={6}>
-                            <Box sx={{ backgroundColor: '', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', position: 'relative', height: '100%' }}>
+                        <Grid width={'50%'} size={6}>
+                            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', position: 'relative', height: '100%' }}>
                                 <Image
                                     style={imageStyle1}
                                     src={image2}
@@ -99,36 +88,28 @@ function WhatPineApple() {
                                 <Box
                                     width={412}
                                     height={358}
-                                    sx={{
-                                        // position: 'absolute',
-                                        // transform: 'translate(100%, 0%)',
-                                        backgroundColor: '#0E204E'
-                                    }}
+                                    bgcolor={'#0E204E'}
                                 >
                                 </Box>
                             </Box>
                         </Grid>
 
                         {/* option */}
-                        <Grid bgcolor={''} width={'50%'} size={6} alignItems={'center'}>
-                            <Box sx={{ backgroundColor: '', display: 'flex', justifyContent: 'flex-end', gap: { lg: '80px', xl: '100px' } }}>
+                        <Grid width={'50%'} size={6} alignItems={'center'}>
+                            <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: { lg: '80px', xl: '100px' } }}>
                                 {data1.map((text, index) => (
                                     <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px' }} >
                                         <Image
                                             style={iconstyle}
                                             src={text.icon}
                                             alt='icon'
-                                        // width={80}
-                                        // height={80}
                                         />
 
                                         <Typography
                                             fontFamily={'Poppins'}
                                             fontWeight={400}
-                                            sx={{
-                                                fontSize: { lg: '16px', xl: '18px' },
-                                                color: '#263238'
-                                            }}
+                                            fontSize={{ lg: '16px', xl: '18px' }}
+                                            color='#263238'
                                         >
                                             {text.text}
                                         </Typography>
@@ -138,28 +119,23 @@ function WhatPineApple() {
                             </Box>
                         </Grid>
                     </Grid>
-                    <Grid sx={{ backgroundColor: '', display: 'flex', justifyContent: 'center', alignItems: 'center' }} size={12}>
+                    <Grid sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} size={12}>
                         {/* option */}
-                        <Grid bgcolor={''} width={'50%'} size={6} alignItems={'center'}>
-                            <Box sx={{ backgroundColor: '', display: 'flex', justifyContent: 'flex-start', gap: { lg: '80px', xl: '100px' } }}>
+                        <Grid width={'50%'} size={6} alignItems={'center'}>
+                            <Box sx={{ display: 'flex', justifyContent: 'flex-start', gap: { lg: '80px', xl: '100px' } }}>
                                 {data2.map((text, index) => (
                                     <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px' }} >
                                         <Image
                                             style={iconstyle}
                                             src={text.icon}
                                             alt='icon'
-                                        // width={80}
-                                        // height={80}
-
                                         />
 
                                         <Typography
                                             fontFamily={'Poppins'}
                                             fontWeight={400}
-                                            sx={{
-                                                fontSize: { lg: '16px', xl: '18px' },
-                                                color: '#263238'
-                                            }}
+                                            fontSize={{ lg: '16px', xl: '18px' }}
+                                            color='#263238'                           
                                         >
                                             {text.text}
                                         </Typography>
@@ -170,16 +146,12 @@ function WhatPineApple() {
                         </Grid>
 
                         {/* รูปภาพ */}
-                        <Grid bgcolor={''} width={'50%'} size={6}>
-                            <Box sx={{ backgroundColor: '', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: 'relative', height: '100%' }}>
+                        <Grid width={'50%'} size={6}>
+                            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: 'relative', height: '100%' }}>
                                 <Box
                                     width={412}
                                     height={358}
-                                    sx={{
-                                        // position: 'absolute',
-                                        // transform: 'translate(-100%, 0%)',
-                                        backgroundColor: '#0E204E'
-                                    }}
+                                    bgcolor={'#0E204E'}
                                 >
                                 </Box>
                                 <Image
@@ -191,7 +163,6 @@ function WhatPineApple() {
                         </Grid>
                     </Grid>
                 </Grid>
-
                 {/* responsive */}
                 <WhatPineAppleResponsive />
             </Box >
@@ -225,15 +196,13 @@ const WhatPineAppleResponsive = (): React.ReactElement => {
             width={'100%'}
             height={'auto'}
             sx={{
-                backgroundColor: '',
                 display: { xs: 'block', lg: 'none' }
             }}
         >
-            <Grid sx={{ backgroundColor: '', display: 'flex', }} size={12}>
+            <Grid sx={{ display: 'flex', }} size={12}>
                 {/* รูปภาพ */}
                 <Box
                     sx={{
-                        backgroundColor: '',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -248,12 +217,12 @@ const WhatPineAppleResponsive = (): React.ReactElement => {
                     <Box
                         maxWidth={460}
                         minHeight={247}
+                        bgcolor={'#0E204E'}
                         sx={{
                             display: 'flex',
                             alignItems: 'center',
                             position: 'absolute',
                             transform: 'translate(0%, 80%)',
-                            backgroundColor: '#0E204E',
                             width: '90%',
                         }}
                     >
@@ -280,7 +249,7 @@ const WhatPineAppleResponsive = (): React.ReactElement => {
                                             fontFamily={'Poppins'}
                                             fontWeight={400}
                                             fontSize={12}
-                                            sx={{ color: 'white' }}
+                                            color='white'
                                         >
                                             {text.text}
                                         </Typography>

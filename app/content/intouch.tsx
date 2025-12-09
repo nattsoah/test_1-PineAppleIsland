@@ -7,45 +7,22 @@ import { CheckBox } from '@mui/icons-material';
 
 
 function InTouch() {
-    const imageStyle: CSSProperties = {
-        width: '552px',
-        height: '725px',
-        objectFit: 'cover',
-        position: 'relative',
-        zIndex: 1
-    }
-
-    const data = [
-        'Lorem ipsum dolor sit amet, consectetur',
-        'Lorem ipsum dolor sit amet, consectetur',
-        'Lorem ipsum dolor sit amet, consectetur',
-        'Lorem ipsum dolor sit amet, consectetur',
-        'Lorem ipsum dolor sit amet, consectetur',
-        'Lorem ipsum dolor sit amet, consectetur',
-        'Lorem ipsum dolor sit amet, consectetur',
-        'Lorem ipsum dolor sit amet, consectetur',
-        'Lorem ipsum dolor sit amet, consectetur',
-        'Lorem ipsum dolor sit amet, consectetur',
-    ]
-
     return (
         <>
-            <Box sx={{
-                backgroundColor: '',
-                display: 'flex',
-                justifyContent: 'center',
-                minHeight: 'auto',
-                margin: { xs: '30px', lg: '0px' },
-                pt:'100px'
-            }}>
-                <Box sx={{ backgroundColor: '', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px', alignItems: 'center', flexWrap: 'nowrap' }}>
+            <Box
+                margin={{ xs: '30px', lg: '0px' }}
+                paddingTop={'100px'}
+                minHeight={'auto'}
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px', alignItems: 'center', flexWrap: 'nowrap' }}>
                     <Typography
                         fontFamily={'Playfair Display'}
                         fontWeight={700}
-                        sx={{
-                            color: '#0E204E',
-                            fontSize: { xs: '34px', lg: '60px' }
-                        }}
+                        color='#0E204E'
+                        fontSize={{ xs: '34px', lg: '60px' }}
                     >Stay In Touch
                     </Typography>
                     <Typography
@@ -53,8 +30,8 @@ function InTouch() {
                         fontWeight={400}
                         fontSize={20}
                         lineHeight={'150%'}
+                        color='#0E204E'
                         sx={{
-                            color: '#0E204E',
                             display: { xs: 'none', lg: 'block' }
                         }}
                     >
@@ -65,21 +42,22 @@ function InTouch() {
                         fontWeight={400}
                         fontSize={16}
                         lineHeight={'150%'}
+                        color='#0E204E'
                         sx={{
-                            color: '#0E204E',
                             display: { xs: 'block', lg: 'none' }
                         }}
                     >
                         If you are interested in finding out more about The Discovery Village, leave a message
                     </Typography>
 
-                    <Box sx={{
-                        display: { xs: 'none', lg: 'flex' },
-                        flexDirection: 'column',
-                        gap: '30px',
-                        maxWidth: '909px',
-                        width: '909px',
-                    }}>
+                    <Box
+                        maxWidth={'909px'}
+                        width={'909px'}
+                        sx={{
+                            display: { xs: 'none', lg: 'flex' },
+                            flexDirection: 'column',
+                            gap: '30px',
+                        }}>
                         <TextField
                             fullWidth
                             variant='outlined'
@@ -171,13 +149,14 @@ export default InTouch
 
 const Form = (): React.ReactElement => {
     return <>
-        <Box sx={{
-            display: { xs: 'flex', lg: 'none' },
-            flexDirection: 'column',
-            gap: '30px',
-            maxWidth: '909px',
-            width: '100%',
-        }}>
+        <Box
+            sx={{
+                display: { xs: 'flex', lg: 'none' },
+                flexDirection: 'column',
+                gap: '30px',
+                maxWidth: '909px',
+                width: '100%',
+            }}>
             <TextField
                 fullWidth
                 variant='standard'

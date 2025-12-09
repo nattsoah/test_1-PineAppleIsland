@@ -28,12 +28,10 @@ function AboutPineApple() {
           fontFamily={'Playfair Display'}
           fontWeight={700}
           minWidth={317}
-          sx={{
-            color: '#0E204E',
-            fontSize: { xs: '24px', lg: '60px' },
-            textAlign: { xs: 'center', lg: 'start' },
-            margin: {xs:'0px' , lg:'30px'}
-          }}
+          fontSize={{ xs: '24px', lg: '60px' }}
+          color='#0E204E'
+          margin={{ xs: '0px', lg: '30px' }}
+          textAlign={{ xs: 'center', lg: 'start' }}
         >
           About <br /> Pineapple Island
         </Typography>
@@ -59,10 +57,10 @@ function AboutPineApple() {
           <Box
             width={433}
             height={620}
+            padding={{ xs: '50px', md: '10px', lg: '50px' }}
+            color={'white'}
+            bgcolor={{ xs: 'transparent', lg: '#0E204E' }}
             sx={{
-              color: 'white',
-              backgroundColor: { xs: 'transparent', lg: '#0E204E' },
-              padding: {xs:'50px' ,md:'10px' , lg:'50px'},
               display: 'flex',
               position: { xs: 'absolute', lg: 'relative' },
               alignItems: 'center',
@@ -71,9 +69,7 @@ function AboutPineApple() {
               fontFamily={'Manrope'}
               fontWeight={400}
               lineHeight={'160%'}
-              sx={{
-                fontSize: { xs: '16px', lg: '20px' },
-              }}
+              fontSize={{ xs: '16px', lg: '20px' }}
             >
               Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first.
               It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development.
@@ -81,7 +77,7 @@ function AboutPineApple() {
             </Typography>
           </Box>
         </Box>
-      </Box>
+      </Box >
 
     </>
   )

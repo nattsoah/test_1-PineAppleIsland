@@ -30,28 +30,31 @@ function BecomeAgent() {
 
     return (
         <>
-            <Box sx={{
-                backgroundColor: { xs: '#0E204E', lg: 'transparent' },
-                display: 'flex',
-                justifyContent: 'center',
-                minHeight: 'auto',
-                mt:'100px',
-                py:'50px'
-                // height: '100vh',
-            }}>
+            <Box
+                bgcolor={{ xs: '#0E204E', lg: 'transparent' }}
+                minHeight={'auto'}
+                marginTop={'100px'}
+                paddingY={'50px'}
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                }}>
                 <Box
+                    color={{ xs: 'white', lg: '#0E204E' }}
                     sx={{
-                        backgroundColor: '',
-                        color: { xs: 'white', lg: '#0E204E' },
-                        display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '30px', alignItems: { xs: 'center', lg: 'start' }, flexWrap: 'nowrap'
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        gap: '30px',
+                        alignItems: { xs: 'center', lg: 'start' },
+                        flexWrap: 'nowrap'
                     }}>
                     <Typography
                         fontFamily={'Playfair Display'}
                         fontWeight={700}
-                        fontSize={60}
+                        fontSize={{ xs: '24px', lg: '60px' }}
                         sx={{
                             color: { xs: 'white', lg: '#0E204E' },
-                            fontSize:{xs : '24px' , lg:'60px'}
                         }}
                     >Become an Agent
                     </Typography>
@@ -60,10 +63,10 @@ function BecomeAgent() {
                         fontWeight={400}
                         fontSize={20}
                         lineHeight={'150%'}
+                        textAlign={{ xs: 'center', lg: 'start' }}
                         sx={{
                             color: { xs: 'white', lg: '#0E204E' },
                             width: '417px',
-                            textAlign: { xs: 'center', lg: 'start' }
                         }}
                     >
                         a community that gives you a taste of
@@ -75,8 +78,8 @@ function BecomeAgent() {
                             borderRadius: { xs: '5px', lg: '0px' },
                             backgroundColor: { xs: 'white', lg: '#0E204E' },
                             color: { xs: '#0E204E', lg: 'white' },
-                            width: {xs:'103px' , lg:'293px'},
-                            height: {xs:'40px' , lg:'62px'}
+                            width: { xs: '103px', lg: '293px' },
+                            height: { xs: '40px', lg: '62px' }
                         }}
                     >
                         <Typography
@@ -91,15 +94,17 @@ function BecomeAgent() {
 
                 {/* desktop image */}
                 <Box>
-                    <Box sx={{ backgroundColor: '', display: { xs: 'none', lg: 'flex' }, alignItems: 'center', justifyContent: '', position: 'relative', height: '100%' }}>
+                    <Box
+                        sx={{
+                            display: { xs: 'none', lg: 'flex' }, alignItems: 'center', position: 'relative', height: '100%'
+                        }}>
                         <Box
                             width={412}
                             height={358}
+                            bgcolor={'#0E204E'}
                             sx={{
                                 position: 'relative',
-                                // zIndex : 0,
                                 transform: 'translate(60%, 0%)',
-                                backgroundColor: '#0E204E'
                             }}
                         >
                         </Box>
