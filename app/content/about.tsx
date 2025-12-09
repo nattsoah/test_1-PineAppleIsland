@@ -8,8 +8,8 @@ function About() {
   const imageStyle: CSSProperties = {
     // maxWidth: '1368px',
     // maxHeight: '717px',
-    width:'1368px',
-    height:'717px',
+    width: '1368px',
+    height: '717px',
     position: 'relative',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -23,7 +23,6 @@ function About() {
           alignItems: 'center',
           justifyContent: { xs: 'center', lg: 'flex-end' },
           margin: { xs: '30px', lg: '0px' },
-          minHeight: '100vh',
         }}>
         {/* รูปภาพ */}
         <Box
@@ -43,27 +42,26 @@ function About() {
         <Box
           maxWidth={786}
           maxHeight={496}
+          bgcolor={{ xs: 'transparent', lg: '#0E204E' }}
+          padding={'80px'}
+          margin={{ sm: '30px', lg: '0px' }}
           sx={{
             justifySelf: 'auto',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            padding: '80px',
             justifyContent: 'center',
             position: 'absolute',
             left: { lg: '2%' },
             gap: { xs: '20px', lg: '0px' },
-            backgroundColor: { xs: 'transparent', lg: '#0E204E' },
-            margin: { sm: '30px', lg: '0px' }
           }}
         >
           <Typography
             fontFamily={'Playfair Display'}
             fontWeight={700}
-            sx={{
-              color: 'white',
-              fontSize: { xs: '250%', md: '300%', lg: '400%' }
-            }}>
+            color='white'
+            fontSize={{ xs: '250%', md: '300%', lg: '400%' }}
+          >
             Pineapple Island:
             GenZ and Millenial
             Abode
@@ -73,8 +71,8 @@ function About() {
             fontWeight={400}
             fontSize={20}
             noWrap={false}
+            color='white'
             sx={{
-              color: 'white',
               textAlign: { sm: 'center', lg: 'start' },
               wordBreak: 'break-word'
             }}>
@@ -110,60 +108,6 @@ function About() {
           </ Box>
         </Box>
       </Box>
-
-      {/* <Box
-        sx={{
-          // zIndex: 'modal',
-          // position: 'absolute',
-          // width: '100%',
-          // height: 'auto',
-          // top: "168px",
-          // right:'0px',
-          // backgroundRepeat: 'no-repeat',
-          // backgroundPosition: 'center',
-          // backgroundSize: 'cover',
-          // backgroundColor: 'red'
-        }}>
-        <Box
-          width={786}
-          height={496}
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            padding: '80px',
-            justifyContent: 'center',
-            position: 'absolute',
-            top: '293px',
-            left: '100px',
-            right: '100px',
-            zIndex: 'tooltip',
-            backgroundColor: '#0E204E'
-          }}
-        >
-          <Typography
-            fontFamily={'Playfair Display'}
-            fontWeight={700}
-            fontSize={64}
-            sx={{ color: 'white' }}>
-            Pineapple Island:
-            GenZ and Millenial
-            Abode
-          </Typography>
-          <Typography
-            fontFamily={'Manrope'}
-            fontWeight={400}
-            fontSize={20}
-            sx={{ color: 'white' }}>
-            a community that gives you a taste of happiness, a place you’ll love to live and an opportunity to build a home.
-          </Typography>
-        </Box>
-        <Image
-          style={imageStyle}
-          src={image}
-          alt="Description"
-        />
-      </Box> */}
     </>
   )
 }

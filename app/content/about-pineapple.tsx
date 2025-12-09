@@ -2,8 +2,6 @@ import { Box, Container, ImageList, ImageListItem, Typography } from '@mui/mater
 import Image from 'next/image'
 import type { CSSProperties } from 'react'
 import image from '../assets/image1.png'
-import { Height } from '@mui/icons-material'
-import { url } from 'inspector'
 
 function AboutPineApple() {
   const imageStyle: CSSProperties = {
@@ -23,19 +21,17 @@ function AboutPineApple() {
           gap: '60px',
           alignItems: 'center',
           margin: { xs: '30px', lg: '0px' },
-          minHeight: '100vh',
+          minHeight: '800px',
         }}>
         {/* หัวข้อ */}
         <Typography
           fontFamily={'Playfair Display'}
           fontWeight={700}
           minWidth={317}
-          sx={{
-            color: '#0E204E',
-            fontSize: { xs: '24px', lg: '60px' },
-            textAlign: { xs: 'center', lg: 'start' },
-            margin: {xs:'0px' , lg:'30px'}
-          }}
+          fontSize={{ xs: '24px', lg: '60px' }}
+          color='#0E204E'
+          margin={{ xs: '0px', lg: '30px' }}
+          textAlign={{ xs: 'center', lg: 'start' }}
         >
           About <br /> Pineapple Island
         </Typography>
@@ -61,10 +57,10 @@ function AboutPineApple() {
           <Box
             width={433}
             height={620}
+            padding={{ xs: '50px', md: '10px', lg: '50px' }}
+            color={'white'}
+            bgcolor={{ xs: 'transparent', lg: '#0E204E' }}
             sx={{
-              color: 'white',
-              backgroundColor: { xs: 'transparent', lg: '#0E204E' },
-              padding: '70px',
               display: 'flex',
               position: { xs: 'absolute', lg: 'relative' },
               alignItems: 'center',
@@ -72,8 +68,8 @@ function AboutPineApple() {
             <Typography
               fontFamily={'Manrope'}
               fontWeight={400}
-              fontSize={16}
               lineHeight={'160%'}
+              fontSize={{ xs: '16px', lg: '20px' }}
             >
               Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first.
               It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development.
@@ -81,7 +77,7 @@ function AboutPineApple() {
             </Typography>
           </Box>
         </Box>
-      </Box>
+      </Box >
 
     </>
   )

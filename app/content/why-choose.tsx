@@ -13,21 +13,22 @@ function WhyChoose() {
         backgroundSize: 'cover',
     }
     return (
-        <>
+        <Box sx={{ minHeight: 'auto' }} >
             <Box
                 sx={{
-                    minHeight: '100vh',
+                    maxHeight: '100%',
                     position: 'relative',
                     margin: { xs: '30px', lg: '0px' },
+                    pt: { xs: '0px', lg: '100px' },
                 }}>
                 <Box
                     sx={{
                         position: 'absolute',
                         inset: 0,
                         backgroundColor: { xs: 'transparent', lg: '#0E204E' },
-                        clipPath: ' polygon(0% 0%, 100% 0, 100% 80%, 70% 65%, 0 80%)',
+                        clipPath: ' polygon(0% 0%, 100% 0, 100% 100%, 70% 80%, 0 100%)',
                         zIndex: 0,
-                        width: '100%'
+                        width: '100%',
                     }} />
                 <Box
                     sx={{
@@ -39,7 +40,6 @@ function WhyChoose() {
                         position: 'relative',
                         zIndex: '1',
                         height: '100%',
-                        mt: '100px'
                     }}
                 >
                     {/* หัวข้อ */}
@@ -71,12 +71,11 @@ function WhyChoose() {
                         <Box
                             width={433}
                             height={634}
+                            color={'0E204E'}
+                            bgcolor={{ xs: 'transparent', lg: '#fff' }}
+                            padding={{ xs: '0px', lg: '70px' }}
                             sx={{
-                                color: '#0E204E',
-                                backgroundColor: { xs: 'transparent', lg: '#fff' },
-                                padding: { xs: '0px', lg: '70px' },
                                 display: 'flex',
-                                // position: { xs: 'relative', lg: 'relative' },
                                 alignItems: 'center',
                                 height: { xs: '100%', lg: '634px' }
                             }}>
@@ -84,10 +83,8 @@ function WhyChoose() {
                                 fontFamily={'Manrope'}
                                 fontWeight={400}
                                 lineHeight={'160%'}
-                                sx={{
-                                    fontSize: { xs: '16px', lg: '20px' },
-                                    textAlign: { xs: 'center', lg: 'start' }
-                                }}
+                                fontSize={{ xs: '16px', lg: '20px' }}
+                                textAlign={{ xs: 'center', lg: 'start' }}
                             >
                                 Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first.
                                 It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development.
@@ -104,36 +101,10 @@ function WhyChoose() {
                                 alt='house'
                             />
                         </Box>
-
                     </Box>
-
-                    {/* <Box sx={{ display: 'flex', boxShadow: '4px 5px 25px rgba(0, 0, 0, 0.1)' }}>
-                        <Box
-                            width={433}
-                            height={634}
-                            sx={{ backgroundColor: 'white', color: '#0E204E', padding: '70px', display: 'flex', alignItems: 'center' }}>
-                            <Typography
-                                fontFamily={'Manrope'}
-                                fontWeight={400}
-                                fontSize={20}
-                                lineHeight={'160%'}
-                            >
-                                Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first.
-                                It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development.
-                                A perfect, professional built  abode that gives you the true taste of beauty and happiness.
-                            </Typography>
-                        </Box>
-                        <Image
-                            style={imageStyle}
-                            src={image}
-                            width={728}
-                            height={634}
-                            alt='house'
-                        />
-                    </Box> */}
                 </Box>
             </Box>
-        </>
+        </Box >
     )
 }
 

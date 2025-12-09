@@ -1,7 +1,7 @@
 'use client'
 import ResponsiveAppBar from "./component/navbar";
 import About from "./content/about";
-import { Box, Container, Grid, Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import AboutPineApple from "./content/about-pineapple";
 import WhyChoose from "./content/why-choose";
 import WhatPineApple from "./content/what-pineapple";

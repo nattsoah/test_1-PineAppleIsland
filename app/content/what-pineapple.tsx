@@ -20,25 +20,19 @@ import icon12 from '../assets/24:7-white.svg'
 function WhatPineApple() {
     const imageStyle1: CSSProperties = {
         maxWidth: '100%',
+        maxHeight: '100%',
         width: '567px',
         height: '582px',
+        aspectRatio: '3/2',
         objectFit: 'cover',
         position: 'relative',
         zIndex: 1
     }
-    const imageStyle2: CSSProperties = {
-        width: '568px',
-        height: '582px',
-        objectFit: 'cover',
-        position: 'relative',
-        zIndex: 1
-    }
-
     const iconstyle: CSSProperties = {
         maxWidth: '80px',
         maxHeight: '80px',
-        width:'100%',
-        height:'100%'
+        width: '100%',
+        height: '100%'
     }
 
     const data1 = [
@@ -53,28 +47,23 @@ function WhatPineApple() {
     ]
 
     return (
-        <>
-            <Box sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '100px',
-                // height: '100vh',
-                // mt: '800px',
-                margin: { xs: '30px', lg: '0px' },
-                // mb: { xs: '10%', lg: '30%' },
-                minHeight: '100vh',
-                paddingTop: '5%'
-            }}>
+        <Box mt={'100px'}>
+            <Box
+                margin={{ xs: '30px', lg: '0px' }}
+                minHeight={'auto'}
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '50px',
+                }}>
                 {/* หัวข้อ */}
                 <Typography
                     fontFamily={'Playfair Display'}
                     fontWeight={700}
-                    sx={{
-                        color: '#0E204E',
-                        fontSize: { xs: '24px', lg: '60px' },
-                    }}
+                    color='#0E204E'
+                    fontSize={{ xs: '24px', lg: '60px' }}
                 >What Pineapple Land Offers</Typography>
 
                 {/* desktop */}
@@ -82,125 +71,116 @@ function WhatPineApple() {
                     container
                     width={'100%'}
                     height={'100%'}
+                    padding={'30px'}
                     sx={{
-                        padding: '30px',
                         display: { xs: 'none', lg: 'block' }
                     }}
                 >
-                    <Grid sx={{ backgroundColor: '', display: 'flex', justifyContent: 'center' }} size={12}>
+                    <Grid sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} size={12}>
                         {/* รูปภาพ */}
-                        <Box sx={{ backgroundColor: '', display: 'flex', alignItems: 'center', justifyContent: '', position: 'relative', height: '100%' }}>
-                            <Image
-                                style={imageStyle1}
-                                src={image2}
-                                alt='box1'
-                            />
-                            <Box
-                                width={412}
-                                height={358}
-                                sx={{
-                                    position: 'relative',
-                                    // zIndex : 0,
-                                    transform: 'translate(-50%, 0%)',
-                                    backgroundColor: '#0E204E'
-                                }}
-                            >
+                        <Grid width={'50%'} size={6}>
+                            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', position: 'relative', height: '100%' }}>
+                                <Image
+                                    style={imageStyle1}
+                                    src={image2}
+                                    alt='box1'
+                                />
+                                <Box
+                                    width={412}
+                                    height={358}
+                                    bgcolor={'#0E204E'}
+                                >
+                                </Box>
                             </Box>
-                        </Box>
+                        </Grid>
 
                         {/* option */}
-                        <Box sx={{ backgroundColor: '', display: 'flex', justifyContent: '', alignItems: 'center', gap: '100px' }}>
-                            {data1.map((text, index) => (
-                                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px' }} >
-                                    <Image
-                                        style={iconstyle}
-                                        src={text.icon}
-                                        alt='icon'
-                                        // width={80}
-                                        // height={80}
+                        <Grid width={'50%'} size={6} alignItems={'center'}>
+                            <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: { lg: '80px', xl: '100px' } }}>
+                                {data1.map((text, index) => (
+                                    <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px' }} >
+                                        <Image
+                                            style={iconstyle}
+                                            src={text.icon}
+                                            alt='icon'
+                                        />
 
-                                    />
+                                        <Typography
+                                            fontFamily={'Poppins'}
+                                            fontWeight={400}
+                                            fontSize={{ lg: '16px', xl: '18px' }}
+                                            color='#263238'
+                                        >
+                                            {text.text}
+                                        </Typography>
 
-                                    <Typography
-                                        fontFamily={'Poppins'}
-                                        fontWeight={400}
-                                        sx={{
-                                            color: '#263238'
-                                        }}
-                                    >
-                                        {text.text}
-                                    </Typography>
-
-                                </Box>
-                            ))}
-                        </Box>
-                    </Grid>
-                    <Grid sx={{ backgroundColor: '', display: 'flex', justifyContent: 'center' }} size={12}>
-
-                        <Box sx={{ backgroundColor: '', display: 'flex', justifyContent: '', alignItems: 'center', gap: '100px' }}>
-                            {data2.map((text, index) => (
-                                <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px' }} >
-                                    <Image
-                                        src={text.icon}
-                                        alt='icon'
-                                        width={80}
-                                        height={80}
-                                    />
-
-                                    <Typography
-                                        fontFamily={'Poppins'}
-                                        fontWeight={400}
-                                        fontSize={18}
-                                        sx={{ color: '#263238' }}
-                                    >
-                                        {text.text}
-                                    </Typography>
-
-                                </Box>
-                            ))}
-                        </Box>
-
-                        <Box sx={{ backgroundColor: '', display: 'flex', alignItems: 'center', justifyContent: '', position: 'relative', height: '100%' }}>
-                            <Box
-                                width={412}
-                                height={358}
-                                sx={{
-                                    position: 'relative',
-                                    // zIndex : 0,
-                                    transform: 'translate(50%, 0%)',
-                                    backgroundColor: '#0E204E'
-                                }}
-                            >
+                                    </Box>
+                                ))}
                             </Box>
-                            <Image
-                                style={imageStyle2}
-                                src={image3}
-                                alt='box1'
-                            />
-                        </Box>
+                        </Grid>
+                    </Grid>
+                    <Grid sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} size={12}>
+                        {/* option */}
+                        <Grid width={'50%'} size={6} alignItems={'center'}>
+                            <Box sx={{ display: 'flex', justifyContent: 'flex-start', gap: { lg: '80px', xl: '100px' } }}>
+                                {data2.map((text, index) => (
+                                    <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '50px' }} >
+                                        <Image
+                                            style={iconstyle}
+                                            src={text.icon}
+                                            alt='icon'
+                                        />
 
+                                        <Typography
+                                            fontFamily={'Poppins'}
+                                            fontWeight={400}
+                                            fontSize={{ lg: '16px', xl: '18px' }}
+                                            color='#263238'                           
+                                        >
+                                            {text.text}
+                                        </Typography>
+
+                                    </Box>
+                                ))}
+                            </Box>
+                        </Grid>
+
+                        {/* รูปภาพ */}
+                        <Grid width={'50%'} size={6}>
+                            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', position: 'relative', height: '100%' }}>
+                                <Box
+                                    width={412}
+                                    height={358}
+                                    bgcolor={'#0E204E'}
+                                >
+                                </Box>
+                                <Image
+                                    style={imageStyle1}
+                                    src={image3}
+                                    alt='box2'
+                                />
+                            </Box>
+                        </Grid>
                     </Grid>
                 </Grid>
-
                 {/* responsive */}
                 <WhatPineAppleResponsive />
             </Box >
-        </>
+        </Box>
     )
 }
 
 export default WhatPineApple
 
+
 const WhatPineAppleResponsive = (): React.ReactElement => {
     const imageStyle: CSSProperties = {
-        minWidth: '335px',
-        minHeight: '387px',
+        maxWidth: '100%',
+        maxHeight: '100%',
         position: 'relative',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
     }
-
-
     const data = [
         { icon: icon7, text: 'Eco Friendly' },
         { icon: icon8, text: 'Smart Homes' },
@@ -214,17 +194,15 @@ const WhatPineAppleResponsive = (): React.ReactElement => {
         <Grid
             container
             width={'100%'}
-            height={'100%'}
+            height={'auto'}
             sx={{
-                backgroundColor: '',
                 display: { xs: 'block', lg: 'none' }
             }}
         >
-            <Grid sx={{ backgroundColor: '', display: 'flex', }} size={12}>
+            <Grid sx={{ display: 'flex', }} size={12}>
                 {/* รูปภาพ */}
                 <Box
                     sx={{
-                        backgroundColor: '',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -239,12 +217,12 @@ const WhatPineAppleResponsive = (): React.ReactElement => {
                     <Box
                         maxWidth={460}
                         minHeight={247}
+                        bgcolor={'#0E204E'}
                         sx={{
                             display: 'flex',
                             alignItems: 'center',
                             position: 'absolute',
                             transform: 'translate(0%, 80%)',
-                            backgroundColor: '#0E204E',
                             width: '90%',
                         }}
                     >
@@ -271,7 +249,7 @@ const WhatPineAppleResponsive = (): React.ReactElement => {
                                             fontFamily={'Poppins'}
                                             fontWeight={400}
                                             fontSize={12}
-                                            sx={{ color: 'white' }}
+                                            color='white'
                                         >
                                             {text.text}
                                         </Typography>
