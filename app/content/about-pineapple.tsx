@@ -5,22 +5,23 @@ import image from '../assets/image1.png'
 
 function AboutPineApple() {
   const imageStyle: CSSProperties = {
-    height: '620px',
+    aspectRatio:"auto",
     position: 'relative',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    objectFit:"cover"
   }
 
   return (
     <>
       <Box
-        sx={{
+         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', lg: 'row' },
           justifyContent: 'center',
           gap: '60px',
           alignItems: 'center',
-          margin: { xs: '30px', lg: '0px' },
+          margin: "30px",
           minHeight: '800px',
         }}>
         {/* หัวข้อ */}
@@ -47,15 +48,13 @@ function AboutPineApple() {
             <Image
               style={imageStyle}
               src={image}
-              width={728}
-              height={620}
               alt='house'
             />
           </Box>
 
           {/* ข้อความ */}
           <Box
-            width={433}
+            maxWidth={433}
             height={620}
             padding={{ xs: '50px', md: '10px', lg: '50px' }}
             color={'white'}
