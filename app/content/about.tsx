@@ -1,18 +1,17 @@
 import { Box, Button, Grid, ImageList, ImageListItem, Typography } from '@mui/material'
 import Image from 'next/image'
 import type { CSSProperties } from 'react'
-import image from '../assets/image.png'
-import image1 from '../assets/image1.png'
+import image from '../assets/image6.jpg'
+import Link from 'next/link'
 
 function About() {
   const imageStyle: CSSProperties = {
-    // maxWidth: '1368px',
-    // maxHeight: '717px',
     width: '1368px',
     height: '717px',
     position: 'relative',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    objectFit:'cover'
   }
 
   return (
@@ -30,6 +29,7 @@ function About() {
             filter: { xs: 'brightness(0.6)', lg: 'brightness(1)' },
             maxWidth: '1368px',
             maxHeight: '717px',
+            clipPath: ' polygon(0% 0%, 100% 0, 100% 100%, 70% 80%, 0 100%)',
           }}>
           <Image
             style={imageStyle}
@@ -60,7 +60,8 @@ function About() {
             fontFamily={'Playfair Display'}
             fontWeight={700}
             color='white'
-            fontSize={{ xs: '250%', md: '300%', lg: '400%' }}
+            fontSize={{ xs: "26px", md: "64px" }}
+            textAlign={{ xs: "center", lg: "start" }}
           >
             Pineapple Island:
             GenZ and Millenial
@@ -86,25 +87,26 @@ function About() {
               display: { xs: 'flex', lg: 'none' },
             }}
           >
-            <Button
-              sx={{
-                borderRadius: '5px',
-                backgroundColor: '#ffff',
-                color: 'white',
-                // marginRight: '10px',
-                width: '100%',
-                height: '100%',
-              }}
-            >
-              <Typography
-                fontFamily={'Lato'}
-                fontWeight={500}
-                fontSize={16}
-                sx={{ color: '#0E204E' }}
+            <Link href={"#intouch"}>
+              <Button
+                sx={{
+                  borderRadius: '5px',
+                  backgroundColor: '#ffff',
+                  color: 'white',
+                  width: '100%',
+                  height: '100%',
+                }}
               >
-                Get in Touch
-              </Typography>
-            </Button>
+                <Typography
+                  fontFamily={'Lato'}
+                  fontWeight={500}
+                  fontSize={16}
+                  sx={{ color: '#0E204E' }}
+                >
+                  Get in Touch
+                </Typography>
+              </Button>
+            </Link>
           </ Box>
         </Box>
       </Box>
