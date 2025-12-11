@@ -31,6 +31,7 @@ function Galleries() {
 
     return (
         <Box
+            id="project"
             minHeight={'auto'}
             margin={{ sm: '30px', lg: '0px' }}
             paddingTop={'100px'}

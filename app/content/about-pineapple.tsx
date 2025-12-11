@@ -14,6 +14,7 @@ function AboutPineApple() {
   return (
     <>
       <Box
+        id="about"
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', lg: 'row' },
