@@ -18,6 +18,7 @@ function About() {
   return (
     <>
       <Box
+        position="relative"
         sx={{
           display: 'flex',
           alignItems: 'center',
@@ -52,7 +53,7 @@ function About() {
             alignItems: 'center',
             justifyContent: 'center',
             position: 'absolute',
-            left: { lg: '2%' },
+            left: { lg: '1rem' },
             gap: { xs: '20px', lg: '0px' },
           }}
         >
