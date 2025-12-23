@@ -6,7 +6,9 @@ import { Height } from '@mui/icons-material'
 
 function WhyChoose() {
     const imageStyle: CSSProperties = {
-        height: '634px',
+        // height: '634px',
+        aspectRatio: "auto",
+        objectFit: "cover",
         position: 'relative',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -18,7 +20,7 @@ function WhyChoose() {
                 sx={{
                     maxHeight: '100%',
                     position: 'relative',
-                    margin: { xs: '30px', lg: '0px' },
+                    padding: "30px",
                     pt: { xs: '0px', lg: '100px' },
                 }}>
                 <Box
@@ -65,15 +67,16 @@ function WhyChoose() {
                         position: 'relative',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        boxShadow: { sm: '0px', lg: '4px 5px 25px rgba(0, 0, 0, 0.1)' }
+                        // boxShadow: { sm: '0px', lg: '4px 5px 25px rgba(0, 0, 0, 0.1)' }
                     }}>
                         {/* ข้อความ */}
                         <Box
-                            width={433}
+                            maxWidth={433}
                             height={634}
                             color={'0E204E'}
                             bgcolor={{ xs: 'transparent', lg: '#fff' }}
                             padding={{ xs: '0px', lg: '70px' }}
+                            boxShadow={{ sm: '0px', lg: '4px 5px 25px rgba(0, 0, 0, 0.1)' }}
                             sx={{
                                 display: 'flex',
                                 alignItems: 'center',
@@ -85,6 +88,7 @@ function WhyChoose() {
                                 lineHeight={'160%'}
                                 fontSize={{ xs: '16px', lg: '20px' }}
                                 textAlign={{ xs: 'center', lg: 'start' }}
+                                color="#0E204E"
                             >
                                 Pineapple Island is the most sought-after  community in Ibadan that values and puts the needs of their clients first.
                                 It is a territory with loft complexes that creates a country life and homely feeling that is integrated with industrial development.
@@ -92,12 +96,14 @@ function WhyChoose() {
                             </Typography>
                         </Box>
 
-                        <Box sx={{ filter: { xs: 'brightness(0.6)', lg: 'brightness(1)' } }}>
+                        <Box
+                            boxShadow={{ sm: '0px', lg: '4px 5px 25px rgba(0, 0, 0, 0.1)' }}
+                            sx={{ filter: { xs: 'brightness(0.6)', lg: 'brightness(1)' } }}>
                             <Image
                                 style={imageStyle}
                                 src={image}
-                                width={728}
-                                height={620}
+                                // width={728}
+                                // height={620}
                                 alt='house'
                             />
                         </Box>
