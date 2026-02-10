@@ -47,7 +47,9 @@ function WhatPineApple() {
     ]
 
     return (
-        <Box mt={'100px'}>
+        <Box
+            id="what-we-do"
+            mt={'100px'}>
             <Box
                 margin={{ xs: '30px', lg: '0px' }}
                 minHeight={'auto'}
@@ -135,7 +137,7 @@ function WhatPineApple() {
                                             fontFamily={'Poppins'}
                                             fontWeight={400}
                                             fontSize={{ lg: '16px', xl: '18px' }}
-                                            color='#263238'                           
+                                            color='#263238'
                                         >
                                             {text.text}
                                         </Typography>

@@ -14,7 +14,7 @@ function Footer() {
     return (
         <Container maxWidth={false}
             sx={{
-                mt: '200px',
+                // mt: '200px',
                 position: 'relative',
                 display: 'flex', gap: '150px',
                 textAlign: 'left',

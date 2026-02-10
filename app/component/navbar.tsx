@@ -7,9 +7,14 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton, Menu, MenuItem } from '@mui/material';
+import Link from 'next/link';
 
 function ResponsiveAppBar() {
-    const menu = ['About Us', 'What we do', 'Project']
+    const menu = [
+        { id: '#about', text: 'About Us' },
+        { id: '#what-we-do', text: 'What we do' },
+        { id: '#project', text: 'Project' }
+    ]
     const [open, setOpen] = React.useState<null | HTMLElement>(null);
 
     const toggleOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -46,16 +51,17 @@ function ResponsiveAppBar() {
                     ":hover": { cursor: 'pointer' }
                 }}>
                     {menu.map((menu) => (
-                        <Typography
-                            key={menu}
-                            fontFamily={'Manrope'}
-                            fontWeight={400}
-                            fontSize={20}
-                            sx={{
-                                color: '#232323',
-                            }}>
-                            {menu}
-                        </Typography>
+                        <Link key={menu.text} href={menu.id}>
+                            <Typography
+                                fontFamily={'Manrope'}
+                                fontWeight={400}
+                                fontSize={20}
+                                sx={{
+                                    color: '#232323',
+                                }}>
+                                {menu.text}
+                            </Typography>
+                        </Link>
                     ))}
 
                 </Box>
@@ -90,11 +96,13 @@ function ResponsiveAppBar() {
                         onClose={toggleClose}
                     >
                         {menu.map((menu) => (
-                            <MenuItem key={menu} onClick={toggleClose}>
-                                <Typography fontFamily={'Manrope'} fontWeight={400} fontSize={20} sx={{ color: '#232323' }}>
-                                    {menu}
-                                </Typography>
-                            </MenuItem>
+                            <Link key={menu.text} href={menu.id}>
+                                <MenuItem onClick={toggleClose}>
+                                    <Typography fontFamily={'Manrope'} fontWeight={400} fontSize={20} sx={{ color: '#232323' }}>
+                                        {menu.text}
+                                    </Typography>
+                                </MenuItem>
+                            </Link>
                         ))}
                     </Menu>
 
@@ -105,25 +113,27 @@ function ResponsiveAppBar() {
                     height={'50px'}
                     sx={{ display: { xs: 'none', lg: 'block' } }}
                 >
-                    <Button
-                        sx={{
-                            borderRadius: '0px',
-                            backgroundColor: '#0E204E',
-                            color: 'white',
-                            marginRight: '10px',
-                            width: '100%',
-                            height: '100%'
-                        }}
-                    >
-                        <Typography
-                            fontFamily={'Manrope'}
-                            fontWeight={400}
-                            fontSize={16}
-                            letterSpacing={0}
+                    <Link href={"#intouch"}>
+                        <Button
+                            sx={{
+                                borderRadius: '0px',
+                                backgroundColor: '#0E204E',
+                                color: 'white',
+                                marginRight: '10px',
+                                width: '100%',
+                                height: '100%'
+                            }}
                         >
-                            Get in Touch
-                        </Typography>
-                    </Button>
+                            <Typography
+                                fontFamily={'Manrope'}
+                                fontWeight={400}
+                                fontSize={16}
+                                letterSpacing={0}
+                            >
+                                Get in Touch
+                            </Typography>
+                        </Button>
+                    </Link>
                 </ Box>
 
             </Container>
