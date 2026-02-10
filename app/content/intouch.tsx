@@ -150,6 +150,7 @@ export default InTouch
 const Form = (): React.ReactElement => {
     return <>
         <Box
+            id="intouch"
             sx={{
                 display: { xs: 'flex', lg: 'none' },
                 flexDirection: 'column',
